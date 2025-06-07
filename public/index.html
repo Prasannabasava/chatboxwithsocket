@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Socket Chat with File Upload</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Emoji picker web component script -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat-header">Chat App</div>
+    <div id="messages"></div>
+    <form id="chat-form" enctype="multipart/form-data" style="position: relative;">
+      <!-- Your emoji button -->
+      <button type="button" id="emoji-btn">😊</button>
+      
+      <input id="msg" type="text" placeholder="Type your message..." autocomplete="off" />
+      
+      <input type="file" id="fileInput" style="display:none" />
+      <button type="button" id="fileBtn" title="Attach File">📎</button>
+      <button type="submit">Send</button>
+
+      <!-- Emoji picker container (hidden initially) -->
+      <div id="emoji-container">
+        <button id="emoji-close">✖</button>
+        <emoji-picker id="emoji-picker"></emoji-picker>
+      </div>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

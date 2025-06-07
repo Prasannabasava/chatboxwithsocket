@@ -1,0 +1,133 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ece5dd;
+}
+
+#chat-container {
+    width: 400px;
+    margin: 30px auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#chat-header {
+    background: #075e54;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Base message style */
+#messages div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: pink;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Own message - right aligned */
+.own {
+    margin-left: auto;
+    background-color: pink;
+    color: black;
+}
+
+/* Other message - left aligned */
+.other {
+    margin-right: auto;
+    background-color: white;
+    color: blue;
+}
+
+/* System messages - center aligned */
+.system {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    background: none !important;
+    padding: 0 !important;
+}
+
+#chat-form {
+    display: flex;
+    border-top: 1px solid #ccc;
+    position: relative;
+    align-items: center;
+}
+
+/* Emoji button style */
+#emoji-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #075e54;
+}
+
+/* Text input style */
+#msg {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Send button */
+#chat-form button[type="submit"] {
+    background: #075e54;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Emoji picker container styles */
+#emoji-container {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 100;
+  max-width: 320px;
+  padding: 5px;
+}
+
+/* Close button inside emoji picker */
+#emoji-close {
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  user-select: none;
+}
+
+#emoji-close:hover {
+  color: #555;
+}
